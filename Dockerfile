@@ -7,7 +7,7 @@ WORKDIR /app
 # par la CI via pnpm/action-setup) : pnpm@11 durcit le contrôle des
 # scripts de build en erreur bloquante non interactive (esbuild/sharp/...).
 RUN corepack enable pnpm && corepack prepare pnpm@10 --activate
-COPY package.json pnpm-lock.yaml ./
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 COPY patches ./patches
 RUN pnpm install --frozen-lockfile
 
