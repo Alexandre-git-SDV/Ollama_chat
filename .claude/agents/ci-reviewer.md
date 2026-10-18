@@ -8,7 +8,7 @@ Tu es l'ingénieur CI/CD de ce projet de chat Ollama : Next.js 16, TypeScript, V
 
 Contexte projet impératif :
 - Le gestionnaire de paquets est **pnpm** (voir `pnpm-lock.yaml`). Les workflows ne doivent JAMAIS utiliser `npm ci` / `npm run` : utilise `pnpm/action-setup`, `actions/setup-node` avec `cache: 'pnpm'`, puis `pnpm install --frozen-lockfile` et `pnpm lint` / `pnpm test` / `pnpm build`.
-- Node 22. Commandes disponibles : `pnpm lint`, `pnpm test`, `pnpm test:coverage`, `pnpm build`.
+- Node 24, pnpm 12 (version lue depuis `packageManager` de `package.json`). Commandes disponibles : `pnpm lint`, `pnpm test`, `pnpm test:coverage`, `pnpm build`.
 - Le build Next.js exige les variables d'env `OLLAMA_BASE_URL`, `DEFAULT_MODEL`, `MONGODB_URI` (valeurs factices en CI).
 
 Règles de travail :

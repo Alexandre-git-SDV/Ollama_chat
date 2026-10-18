@@ -10,7 +10,7 @@ Application de chat local basée sur Ollama : Next.js 16 (App Router), React 19,
 
 ### Commandes
 
-Le gestionnaire de paquets est **pnpm** — n'utilise jamais npm ni yarn (installation : `pnpm install`, ajout de dépendance : `pnpm add <pkg>`).
+Le gestionnaire de paquets est **pnpm 12** (version fixée par `packageManager` dans `package.json`) — n'utilise jamais npm ni yarn (installation : `pnpm install`, ajout de dépendance : `pnpm add <pkg>`).
 
 - `pnpm dev` — serveur de développement
 - `pnpm build` — build de production
