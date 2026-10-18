@@ -26,6 +26,9 @@ RUN pnpm build
 FROM base AS runner
 WORKDIR /app
 
+# Applique les correctifs de sécurité Alpine (ex. zlib CVE-2026-85091).
+RUN apk upgrade --no-cache
+
 ENV NODE_ENV=production
 
 # npm/npx/corepack ne sont jamais utilisés au runtime (CMD lance node
