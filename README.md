@@ -27,7 +27,7 @@ A local web interface for chatting with Ollama models, with conversation storage
 
 ### Prerequisites
 
-- Node.js 24+ and **pnpm 10** (`corepack enable pnpm`)
+- Node.js 24+ and **pnpm 12** (`corepack enable pnpm`)
 - Docker & Docker Compose (for the containerized stack)
 - Ollama installed locally (`ollama serve`)
 
