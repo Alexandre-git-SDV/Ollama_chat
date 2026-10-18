@@ -3,14 +3,16 @@ name: Docker Security Scan
 on:
   push:
     branches: [master, development]
-    paths-ignore: &non-functional-paths
+    paths-ignore:
       - '**.md'
       - '.claude/**'
       - 'docs/**'
       - 'LICENSE'
+  # Pas de paths-ignore sur les PR : sans analyse sur le commit de la PR,
+  # le code scanning ne peut pas comparer ses alertes à celles de master
+  # ("configuration not found").
   pull_request:
     branches: [master, development]
-    paths-ignore: *non-functional-paths
   schedule:
     # Hebdomadaire, décalé du CodeQL (lundi 03:00 UTC) pour étaler la charge
     # runner : capte les CVE publiées sur l'image de base même sans push.
