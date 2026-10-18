@@ -1,8 +1,10 @@
 🇬🇧 English | 🇫🇷 [Français](README_fr.md)
 
-# Ollama Chat
+<h1 align="center"><img src="docs/assets/logo.png" alt="Ollama Chat" width="258"></h1>
 
 A local web interface for chatting with Ollama models, with conversation storage in MongoDB.
+
+<p align="center"><img src="docs/assets/demo-en.gif" alt="Ollama Chat demo: switching the accent color to red, picking gemma4:31b-cloud and streaming an English reply" width="900"></p>
 
 ## Features
 

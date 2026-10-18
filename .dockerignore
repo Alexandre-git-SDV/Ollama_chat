@@ -18,6 +18,7 @@ docker
 # docs
 README.md
 AGENTS.md
+docs
 
 # ai tooling / agents (dev-only, jamais utile dans l'image)
 .claude
