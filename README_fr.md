@@ -27,7 +27,7 @@ Interface web locale pour discuter avec des modèles Ollama, avec stockage des c
 
 ### Prérequis
 
-- Node.js 24+ et **pnpm 10** (`corepack enable pnpm`)
+- Node.js 24+ et **pnpm 12** (`corepack enable pnpm`)
 - Docker & Docker Compose (pour la stack conteneurisée)
 - Ollama installé localement (`ollama serve`)
 

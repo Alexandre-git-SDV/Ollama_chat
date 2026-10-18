@@ -3,16 +3,16 @@ FROM node:24-alpine AS base
 FROM base AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
-# pnpm@10 aligné sur le champ "packageManager" de package.json (utilisé aussi
-# par la CI via pnpm/action-setup) : pnpm@11 durcit le contrôle des
-# scripts de build en erreur bloquante non interactive (esbuild/sharp/...).
-RUN corepack enable pnpm && corepack prepare pnpm@10 --activate
+# pnpm@12.14.0 aligné sur le champ "packageManager" de package.json (utilisé
+# aussi par la CI via pnpm/action-setup) ; les scripts de build des
+# dépendances sont réglés par allowBuilds dans pnpm-workspace.yaml.
+RUN corepack enable pnpm && corepack prepare pnpm@12.14.0 --activate
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 COPY patches ./patches
 RUN pnpm install --frozen-lockfile
 
 FROM base AS builder
-RUN corepack enable pnpm && corepack prepare pnpm@10 --activate
+RUN corepack enable pnpm && corepack prepare pnpm@12.14.0 --activate
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
