@@ -20,7 +20,7 @@ Le gestionnaire de paquets est **pnpm 12** (version fixée par `packageManager` 
 
 ### Structure
 
-- `src/app/` — pages et routes API App Router (`api/chat`, `api/conversations`, `api/ollama/health`)
+- `src/app/` — pages et routes API App Router (`api/ollama/[...path]` proxy principal, routes Ollama granulaires `api/ollama/*`, `api/chat`, `api/conversations`)
 - `src/components/`, `src/hooks/`, `src/lib/`, `src/models/`, `src/types/` — composants, hooks, logique partagée, modèles Mongoose, types
 - `tests/` — tests Vitest (Testing Library + jsdom)
 

@@ -19,9 +19,9 @@ A local web interface for chatting with Ollama models, with conversation storage
 - **Backend**: Next.js Route Handlers (Ollama proxy, conversation CRUD)
 - **AI**: [Ollama](https://ollama.com) — local models (Llama, Mistral, etc.)
 - **Database**: MongoDB (Mongoose 9)
-- **Tests**: Vitest + Testing Library (jsdom)
-- **Containerization**: Multi-stage Docker (pnpm/corepack), Docker Compose
-- **Package manager**: **pnpm** (pinned via `packageManager`, never npm/yarn)
+- **Tests**: Vitest 5 + Testing Library (jsdom)
+- **Containerization**: Multi-stage Docker on `node:24-alpine` (pnpm/corepack), Docker Compose
+- **Package manager**: **pnpm 12** (pinned via `packageManager`, never npm/yarn)
 
 ## Quick start
 
